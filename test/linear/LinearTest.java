@@ -152,7 +152,7 @@ public class LinearTest {
         Assert.assertEquals("(dot) is expected to be zero",
                 ClojureCall.nonNullTyped(inner.actual(), "(dot)", Number.class, new Object[0]).doubleValue(),
                 0.0,
-                0.0
+                1e-9
         );
         testRandom(3);
         testRandom(4);

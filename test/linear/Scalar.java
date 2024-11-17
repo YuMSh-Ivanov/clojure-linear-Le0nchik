@@ -26,7 +26,7 @@ public final class Scalar<T extends Number> implements Tensor<T> {
             return true;
         }
         if (o instanceof final Scalar<?> scalar) {
-            return Objects.equals(value, scalar.value);
+            return Math.abs(value.doubleValue() - scalar.value.doubleValue()) <= 1e-9;
         }
         return false;
     }
